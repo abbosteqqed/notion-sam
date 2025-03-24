@@ -1,11 +1,14 @@
+import Navbar from '@/features/home/components/navbar';
+import { ChildProps } from '@/types';
 import React from 'react';
 
-interface HomeLayoutProps {
-	children: React.ReactNode;
-}
-
-const HomeLayout = ({ children }: HomeLayoutProps) => {
-	return <div>{children}</div>;
+const HomeLayout = ({ children }: ChildProps) => {
+	return (
+		<div className='h-full'>
+			<Navbar />
+			<main className='h-full pt-40'>{children}</main>
+		</div>
+	);
 };
 
 export default HomeLayout;
